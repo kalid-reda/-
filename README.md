@@ -8,7 +8,3 @@
 - **Icons:** FontAwesome v6.4.0.
 - **Interactivity:** Custom JavaScript ES6+ (No heavy framework dependencies).
 
-## 📁 هيكلية الملفات وتعديل الرقم الموحد
-- لتعديل رقم الواتساب الموحد لكافة أرجاء الموقع، قم بفتح الملف:
-  `assets/js/config.js`
-- وقم بتعديل القيمة الخاصة بـ `WHATSAPP_NUMBER`.
