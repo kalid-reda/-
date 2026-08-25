@@ -1,0 +1,553 @@
+/* ==========================================================================
+   مؤسسة حدائق الجنة - Style Engine (Luxury & Modern Landscaping UI)
+   ========================================================================== */
+
+:root {
+    --forest-dark: #07130c;
+    --green-deep: #0b2e1b;
+    --green-main: #1e5b36;
+    --green-accent: #5c8d45;
+    --gold-accent: #c9a44c;
+    --gold-hover: #b38f3a;
+    --cream-bg: #f5f1e8;
+    --light-gray: #f8f9fa;
+    --dark-text: #1a1a1a;
+    --white: #FDFBF7;
+    --shadow-sm: 0 4px 15px rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 12px 30px rgba(0, 0, 0, 0.12);
+    --glass: rgba(7, 19, 12, 0.85);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tajawal', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--light-gray);
+    color: var(--dark-text);
+    line-height: 1.8;
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+.container {
+    width: 90%;
+    max-width: 1240px;
+    margin: auto;
+}
+
+/* ==========================================================================
+   Navbar System
+   ========================================================================== */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: var(--transition);
+    padding: 1rem 0;
+    background: transparent;
+}
+
+.navbar-scrolled {
+    background: var(--glass);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: var(--shadow-sm);
+    padding: 0.6rem 0;
+}
+
+/* تثبيت خلفية النافبار في الصفحات الفرعية بنفس لون وشفافية الصفحة الرئيسية */
+.navbar.sub-page-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--glass) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: var(--shadow-sm);
+    padding: 0.8rem 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: var(--white);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo span { color: var(--gold-accent); }
+.logo i { color: var(--green-accent); }
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 22px;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--gold-accent);
+}
+
+/* زر القائمة للموبايل */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--gold-accent);
+    font-size: 1.6rem;
+    cursor: pointer;
+    padding: 5px;
+}
+
+/* الاستعلامات التجاوبية للنافبار */
+@media (max-width: 992px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .header-contact {
+        display: none;
+    }
+
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--glass);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    nav.active {
+        max-height: 400px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        padding: 20px 0;
+        gap: 0;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+}
+
+/* ==========================================================================
+   UI Buttons
+   ========================================================================== */
+.btn {
+    padding: 12px 26px;
+    border-radius: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    border: none;
+    transition: var(--transition);
+    font-size: 0.95rem;
+}
+
+.btn-gold {
+    background: var(--gold-accent);
+    color: var(--white);
+}
+
+.btn-gold:hover {
+    background: var(--gold-hover);
+    transform: translateY(-2px);
+}
+
+.btn-primary-gold {
+    background: var(--gold-accent);
+    color: var(--forest-dark);
+}
+
+.btn-outline-light {
+    border: 2px solid var(--white);
+    color: var(--white);
+}
+
+.btn-outline-light:hover {
+    background: var(--white);
+    color: var(--forest-dark);
+}
+
+.btn-whatsapp-large {
+    background: #25d366;
+    color: var(--white);
+    width: 100%;
+    justify-content: center;
+    padding: 15px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+}
+
+/* ==========================================================================
+   Hero Cinematic Video Section
+   ========================================================================== */
+.hero-cinematic {
+    position: relative;
+    height: 100vh;
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    padding-top: 60px;
+    overflow: hidden;
+}
+
+.hero-video-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(7, 19, 12, 0.65), rgba(7, 19, 12, 0.75));
+    z-index: 1;
+}
+
+.hero-content {
+    max-width: 900px;
+    z-index: 2;
+    position: relative;
+}
+
+.hero-badge {
+    background: rgba(201, 164, 76, 0.15);
+    border: 1px solid var(--gold-accent);
+    color: var(--gold-accent);
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin: 20px 0;
+    line-height: 1.2;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 35px;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* ==========================================================================
+   Stats Counter Section
+   ========================================================================== */
+.stats-section {
+    position: relative;
+    padding: 60px 0 20px 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    background: var(--white);
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: var(--shadow-lg);
+    border-top: 4px solid var(--gold-accent);
+}
+
+.stat-card {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--green-main);
+    display: block;
+}
+
+.stat-card p {
+    font-weight: 600;
+    color: var(--dark-text);
+}
+
+/* ==========================================================================
+   Multi-Step Calculator Layout
+   ========================================================================== */
+.calculator-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: var(--shadow-lg);
+    max-width: 750px;
+    margin: 50px auto;
+}
+
+.progress-bar-container {
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: var(--green-main);
+    width: 20%;
+    transition: var(--transition);
+}
+
+.calc-step {
+    display: none;
+}
+
+.calc-step.active {
+    display: block;
+}
+
+.step-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.option-box {
+    border: 2px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.option-box:hover, .option-box.selected {
+    border-color: var(--green-main);
+    background: rgba(30, 91, 54, 0.05);
+}
+
+/* ==========================================================================
+   Footer Section
+   ========================================================================== */
+footer {
+    background: var(--forest-dark);
+    color: var(--white);
+    padding: 70px 0 25px 0;
+    margin-top: 80px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-col h4 {
+    color: var(--gold-accent);
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-col ul li a:hover {
+    color: var(--gold-accent);
+}
+
+.copyright {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+/* ==========================================================================
+   Floating Action Buttons
+   ========================================================================== */
+.floating-actions {
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 999;
+}
+
+.float-btn {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    text-decoration: none;
+    box-shadow: var(--shadow-lg);
+    transition: var(--transition);
+}
+
+.float-wa { background: #25d366; }
+.float-phone { background: var(--green-main); }
+.float-btn:hover { transform: scale(1.1); }
+
+/* ==========================================================================
+   Custom Interactive Cursor
+   ========================================================================== */
+@media (pointer: fine) {
+    body {
+        cursor: none;
+    }
+    a, button, input, textarea, .btn {
+        cursor: none;
+    }
+}
+
+.cursor-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--gold-accent);
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.15s ease-out, background-color 0.3s ease;
+    transform: translate(-50%, -50%);
+}
+
+.cursor-outline {
+    width: 40px;
+    height: 40px;
+    border: 1.5px solid var(--gold-accent);
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    transition: transform 0.25s ease-out, width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
+    transform: translate(-50%, -50%);
+}
+
+.cursor-hover .cursor-outline {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(212, 175, 55, 0.15);
+    border-color: var(--gold-accent);
+}
+
+.cursor-hover .cursor-dot {
+    transform: translate(-50%, -50%) scale(1.5);
+    background-color: #fff;
+}
+
+/* ==========================================================================
+   Image Hover Effects
+   ========================================================================== */
+img {
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease, filter 0.4s ease;
+    will-change: transform;
+    max-width: 100%;
+    height: auto;
+}
+
+img:hover {
+    transform: scale(1.04) translateY(-3px);
+    filter: brightness(1.05);
+}
+
+.card-img-wrapper, 
+.project-img-box, 
+.scroll-reveal-img {
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.card-img-wrapper img:hover,
+.project-img-box img:hover,
+.scroll-reveal-img img:hover {
+    transform: scale(1.08);
+}
+.codexa{
+    text-decoration: none;
+    color: #ded8d8;
+}

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معرض الأعمال | مؤسسة حدائق الجنة</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+     <!-- Custom Cursor Elements -->
+<div class="cursor-dot"></div>
+<div class="cursor-outline"></div>
+
+    <header class="navbar sub-page-navbar">
+    <div class="container nav-container">
+        <a href="index.html" class="logo">
+            <i class="fa-solid fa-tree"></i> حدائق <span>الجنة</span>
+        </a>
+        
+        <!-- زر فتح القائمة للشاشات الصغيرة -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="قائمة التصفح">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav id="navMenu">
+            <ul class="nav-links">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="services.html">خدماتنا</a></li>
+                <li><a href="projects.html">معرض الأعمال</a></li>
+                <li><a href="calculator.html">حاسبة التكلفة</a></li>
+                <li><a href="blog.html">المدونة</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-contact">
+            <a href="contact.html" class="btn btn-gold">اطلب معاينة</a>
+        </div>
+    </div>
+</header>
+    <div style="padding: 140px 0 60px 0;" class="container">
+        <h1 style="text-align:center; color:var(--green-main); margin-bottom: 20px;">معرض مشاريعنا المنفذة</h1>
+        
+        <!-- أزرار الفلترة -->
+        <div style="display:flex; justify-content:center; gap:10px; margin-bottom:40px; flex-wrap:wrap;">
+            <button class="btn filter-btn active" data-filter="all">الكل</button>
+            <button class="btn filter-btn" data-filter="grass">عشب صناعي</button>
+            <button class="btn filter-btn" data-filter="water">شلالات ونوافير</button>
+            <button class="btn filter-btn" data-filter="pergola">برجولات وجلسات</button>
+        </div>
+
+       <!-- شبكة المشاريع والأعمال (20 مشروع) -->
+<div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:25px;">
+    
+    <!-- 1. عشب صناعي دنس كاسبر -->
+    <div class="project-card" data-category="grass" style="border-radius:12px; overflow:hidden; position:relative; height:280px;">
+        <img src="https://media.istockphoto.com/id/1145438050/photo/back-yard-with-very-neat-rolled-turf.webp?a=1&b=1&s=612x612&w=0&k=20&c=yqL0VKp_fMBgesAYFlc-F-kImCNfTxX39_y1Skj0HNI=" style="width:100%; height:100%; object-fit:cover;" alt="عشب صناعي">
+        <div style="position:absolute; bottom:0; width:100%; background:linear-gradient(transparent, rgba(0,0,0,0.9)); padding:20px; color:#fff;">
+            <h4 style="color:var(--gold-accent);">تركيب عشب صناعي عالي الكثافة - الرياض</h4>
+            <p style="font-size:0.85rem; margin-bottom:12px;">فرش عشب صناعي 50 ملم جودة فائقة مقاوم لأشعة الشمس</p>
+            <a href="contact.html" class="btn btn-gold" style="width:100%; justify-content:center; padding:8px; font-size:0.9rem; border-radius:8px;">طلب الخدمة <i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+    <!-- 2. شلال مودرن جداري -->
+    <div class="project-card" data-category="water" style="border-radius:12px; overflow:hidden; position:relative; height:280px;">
+        <img src="https://media.istockphoto.com/id/2194323140/photo/floating-water-droplets-creating-a-healing-vibe.webp?a=1&b=1&s=612x612&w=0&k=20&c=olKFLsXYhiU-sTqhLRAxXP--Ov4jnv0hoaMa3nryxyE=" style="width:100%; height:100%; object-fit:cover;" alt="شلال جداري">
+        <div style="position:absolute; bottom:0; width:100%; background:linear-gradient(transparent, rgba(0,0,0,0.9)); padding:20px; color:#fff;">
+            <h4 style="color:var(--gold-accent);">شلال جداري صناعي - جدة</h4>
+            <p style="font-size:0.85rem; margin-bottom:12px;">تصميم شلال مودرن مع مصب استيل وإضاءة مخفية</p>
+            <a href="contact.html" class="btn btn-gold" style="width:100%; justify-content:center; padding:8px; font-size:0.9rem; border-radius:8px;">طلب الخدمة <i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+    <!-- 3. إضاءة مخفية في العشب -->
+    <div class="project-card" data-category="lighting" style="border-radius:12px; overflow:hidden; position:relative; height:280px;">
+        <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=600&q=80" style="width:100%; height:100%; object-fit:cover;" alt="إضاءة عشب">
+        <div style="position:absolute; bottom:0; width:100%; background:linear-gradient(transparent, rgba(0,0,0,0.9)); padding:20px; color:#fff;">
+            <h4 style="color:var(--gold-accent);">إضاءات مدمجة في العشب - الدمام</h4>
+            <p style="font-size:0.85rem; margin-bottom:12px;">تركيب سبوت لايت أرضي ضد الماء بلمسة دافئة للممرات</p>
+            <a href="contact.html" class="btn btn-gold" style="width:100%; justify-content:center; padding:8px; font-size:0.9rem; border-radius:8px;">طلب الخدمة <i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+    <!-- 4. برجولة خشبية ومظلة -->
+    <div class="project-card" data-category="pergola" style="border-radius:12px; overflow:hidden; position:relative; height:280px;">
+        <img src="https://images.unsplash.com/photo-1557429287-b2e26467fc2b?auto=format&fit=crop&w=600&q=80" style="width:100%; height:100%; object-fit:cover;" alt="برجولات">
+        <div style="position:absolute; bottom:0; width:100%; background:linear-gradient(transparent, rgba(0,0,0,0.9)); padding:20px; color:#fff;">
+            <h4 style="color:var(--gold-accent);">برجولة جلسة خارجية - الخبر</h4>
+            <p style="font-size:0.85rem; margin-bottom:12px;">مظلة خشبية مودرن مع سقف عازل للأمطار والحرارة</p>
+            <a href="contact.html" class="btn btn-gold" style="width:100%; justify-content:center; padding:8px; font-size:0.9rem; border-radius:8px;">طلب الخدمة <i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+    <!-- 5. عشب جداري وبديل الخشب -->
+    <div class="project-card" data-category="wall" style="border-radius:12px; overflow:hidden; position:relative; height:280px;">
+        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" style="width:100%; height:100%; object-fit:cover;" alt="عشب جداري">
+        <div style="position:absolute; bottom:0; width:100%; background:linear-gradient(transparent, rgba(0,0,0,0.9)); padding:20px; color:#fff;">
+            <h4 style="color:var(--gold-accent);">تكسيات بديل الخشب وعشب جداري - مكة</h4>
+            <p style="font-size:0.85rem; margin-bottom:12px;">دمج شرائح WPC مع ثلاثي الأبعاد من العشب الجداري</p>
+            <a href="contact.html" class="btn btn-gold" style="width:100%; justify-content:center; padding:8px; font-size:0.9rem; border-radius:8px;">طلب الخدمة <i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+    <!-- 6. تنسيق حدائق متكامل -->
+    <div class="project-card" data-category="design" style="border-radius:12px; overflow:hidden; position:relative; height:280px;">
+        <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=600&q=80" style="width:100%; height:100%; object-fit:cover;" alt="تنسيق حدائق">
+        <div style="position:absolute; bottom:0; width:100%; background:linear-gradient(transparent, rgba(0,0,0,0.9)); padding:20px; color:#fff;">
+            <h4 style="color:var(--gold-accent);">تنسيق حديقة فيلا مودرن - المدينة</h4>
+            <p style="font-size:0.85rem; margin-bottom:12px;">تخطيط وتنفيذ حديقة متكاملة بأسلوب الفلل الحديثة</p>
+            <a href="contact.html" class="btn btn-gold" style="width:100%; justify-content:center; padding:8px; font-size:0.9rem; border-radius:8px;">طلب الخدمة <i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+    <!-- 7. نافورة حدائق رخامية -->
+    <div class="project-card" data-category="water" style="border-radius:12px; overflow:hidden; position:relative; height:280px;">
+        <img src="https://images.unsplash.com/photo-1584467541268-b040f83be3fd?auto=format&fit=crop&w=600&q=80" style="width:100%; height:100%; object-fit:cover;" alt="نافورة">
+        <div style="position:absolute; bottom:0; width:100%; background:linear-gradient(transparent, rgba(0,0,0,0.9)); padding:20px; color:#fff;">
+            <h4 style="color:var(--gold-accent);">نافورة حدائق دائرية - الأحساء</h4>
+            <p style="font-size:0.85rem; margin-bottom:12px;">نافورة حجرية وسطية مع إضاءة متعددة الألوان LED</p>
+            <a href="contact.html" class="btn btn-gold" style="width:100%; justify-content:center; padding:8px; font-size:0.9rem; border-radius:8px;">طلب الخدمة <i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+    <!-- 8. شبكات ري اتوماتيكية -->
+    <div class="project-card" data-category="irrigation" style="border-radius:12px; overflow:hidden; position:relative; height:280px;">
+        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=600&q=80" style="width:100%; height:100%; object-fit:cover;" alt="شبكة ري">
+        <div style="position:absolute; bottom:0; width:100%; background:linear-gradient(transparent, rgba(0,0,0,0.9)); padding:20px; color:#fff;">
+            <h4 style="color:var(--gold-accent);">تمديد شبكة ري ذكية - القصيم</h4>
+            <p style="font-size:0.85rem; margin-bottom:12px;">أنظمة ري محوسبة بالتايمر تغطي الحديقة بالكامل</p>
+            <a href="contact.html" class="btn btn-gold" style="width:100%; justify-content:center; padding:8px; font-size:0.9rem; border-radius:8px;">طلب الخدمة <i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+    <!-- 9. أرضيات بلاط مع عشب -->
+    <div class="project-card" data-category="flooring" style="border-radius:12px; overflow:hidden; position:relative; height:280px;">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" style="width:100%; height:100%; object-fit:cover;" alt="ممرات حديقة">
+        <div style="position:absolute; bottom:0; width:100%; background:linear-gradient(transparent, rgba(0,0,0,0.9)); padding:20px; color:#fff;">
+            <h4 style="color:var(--gold-accent);">ممرات بلاط مع عشب صناعي - الطائف</h4>
+            <p style="font-size:0.85rem; margin-bottom:12px;">تصميم ممرات ديكورية بتداخل بلاط الانترلوك مع الخضرة</p>
+            <a href="contact.html" class="btn btn-gold" style="width:100%; justify-content:center; padding:8px; font-size:0.9rem; border-radius:8px;">طلب الخدمة <i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+    <!-- 10. زراعة عشب طبيعي -->
+    <div class="project-card" data-category="grass" style="border-radius:12px; overflow:hidden; position:relative; height:280px;">
+        <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=600&q=80" style="width:100%; height:100%; object-fit:cover;" alt="عشب طبيعي">
+        <div style="position:absolute; bottom:0; width:100%; background:linear-gradient(transparent, rgba(0,0,0,0.9)); padding:20px; color:#fff;">
+            <h4 style="color:var(--gold-accent);">زراعة عشب طبيعي C2000 - الرياض</h4>
+            <p style="font-size:0.85rem; margin-bottom:12px;">توريد وزراعة إنجيلة طبيعية أمريكية شديدة التحمل</p>
+            <a href="contact.html" class="btn btn-gold" style="width:100%; justify-content:center; padding:8px; font-size:0.9rem; border-radius:8px;">طلب الخدمة <i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+    <!-- 11. شلال حجري كلاسيك -->
+    <div class="project-card" data-category="water" style="border-radius:12px; overflow:hidden; position:relative; height:280px;">
+        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80" style="width:100%; height:100%; object-fit:cover;" alt="شلال حجر">
+        <div style="position:absolute; bottom:0; width:100%; background:linear-gradient(transparent, rgba(0,0,0,0.9)); padding:20px; color:#fff;">
+            <h4 style="color:var(--gold-accent);">تصميم شلال صخري طبيعي - أبها</h4>
+            <p style="font-size:0.85rem; margin-bottom:12px;">شلال حجر عشوائي متدرج يعطي انطباع البيئة الطبيعية</p>
+            <a href="contact.html" class="btn btn-gold" style="width:100%; justify-content:center; padding:8px; font-size:0.9rem; border-radius:8px;">طلب الخدمة <i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+    <!-- 12. إضاءة جدارية وعلى الشجر -->
+    <div class="project-card" data-category="lighting" style="border-radius:12px; overflow:hidden; position:relative; height:280px;">
+        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80" style="width:100%; height:100%; object-fit:cover;" alt="إضاءة اشجار">
+        <div style="position:absolute; bottom:0; width:100%; background:linear-gradient(transparent, rgba(0,0,0,0.9)); padding:20px; color:#fff;">
+            <h4 style="color:var(--gold-accent);">إضاءة تسليط على الأشجار - جدة</h4>
+            <p style="font-size:0.85rem; margin-bottom:12px;">توزيع كشافات أرضية موجهة نحو النخيل والأشجار العالية</p>
+            <a href="contact.html" class="btn btn-gold" style="width:100%; justify-content:center; padding:8px; font-size:0.9rem; border-radius:8px;">طلب الخدمة <i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+    <!-- 13. مظلة حديد بديل خشب -->
+    <div class="project-card" data-category="pergola" style="border-radius:12px; overflow:hidden; position:relative; height:280px;">
+        <img src="https://images.unsplash.com/photo-1592595896551-12b371d546d5?auto=format&fit=crop&w=600&q=80" style="width:100%; height:100%; object-fit:cover;" alt="مظلة حديد">
+        <div style="position:absolute; bottom:0; width:100%; background:linear-gradient(transparent, rgba(0,0,0,0.9)); padding:20px; color:#fff;">
+            <h4 style="color:var(--gold-accent);">جلسة مظلة حديدية - حائل</h4>
+            <p style="font-size:0.85rem; margin-bottom:12px;">تركيب برجولة حديد دهان ناري بالكامل مع جدران لكسان</p>
+            <a href="contact.html" class="btn btn-gold" style="width:100%; justify-content:center; padding:8px; font-size:0.9rem; border-radius:8px;">طلب الخدمة <i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+    <!-- 14. عشب صناعي للملاعب والأسطح -->
+    <div class="project-card" data-category="grass" style="border-radius:12px; overflow:hidden; position:relative; height:280px;">
+        <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=600&q=80" style="width:100%; height:100%; object-fit:cover;" alt="تنسيق سطوح">
+        <div style="position:absolute; bottom:0; width:100%; background:linear-gradient(transparent, rgba(0,0,0,0.9)); padding:20px; color:#fff;">
+            <h4 style="color:var(--gold-accent);">تنسيق سطح منزل بعشب صناعي - تبوك</h4>
+            <p style="font-size:0.85rem; margin-bottom:12px;">تحويل الروف إلى جلسة ملحقة بعشب وقماش عازل</p>
+            <a href="contact.html" class="btn btn-gold" style="width:100%; justify-content:center; padding:8px; font-size:0.9rem; border-radius:8px;">طلب الخدمة <i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+    <!-- 15. بديل رخام وبديل خشب مع شلال -->
+    <div class="project-card" data-category="wall" style="border-radius:12px; overflow:hidden; position:relative; height:280px;">
+        <img src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=600&q=80" style="width:100%; height:100%; object-fit:cover;" alt="بديل رخام">
+        <div style="position:absolute; bottom:0; width:100%; background:linear-gradient(transparent, rgba(0,0,0,0.9)); padding:20px; color:#fff;">
+            <h4 style="color:var(--gold-accent);">خلفية شلال بديل الرخام - الخرج</h4>
+            <p style="font-size:0.85rem; margin-bottom:12px;">تركيب ألواح بديل الرخام المقاومة للماء خلف المصبات</p>
+            <a href="contact.html" class="btn btn-gold" style="width:100%; justify-content:center; padding:8px; font-size:0.9rem; border-radius:8px;">طلب الخدمة <i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+    <!-- 16. تنسيق حديقة منزلية صغيرة -->
+    <div class="project-card" data-category="design" style="border-radius:12px; overflow:hidden; position:relative; height:280px;">
+        <img src="https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&w=600&q=80" style="width:100%; height:100%; object-fit:cover;" alt="حديقة صغيرة">
+        <div style="position:absolute; bottom:0; width:100%; background:linear-gradient(transparent, rgba(0,0,0,0.9)); padding:20px; color:#fff;">
+            <h4 style="color:var(--gold-accent);">استغلال الملاحق والمساحات الصغيرة - الرياض</h4>
+            <p style="font-size:0.85rem; margin-bottom:12px;">تصميم ذكي للمساحات الضيقة يجمع بين العشب والجلسة</p>
+            <a href="contact.html" class="btn btn-gold" style="width:100%; justify-content:center; padding:8px; font-size:0.9rem; border-radius:8px;">طلب الخدمة <i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+    <!-- 17. نافورة جدارية ثلاثية المصبات -->
+    <div class="project-card" data-category="water" style="border-radius:12px; overflow:hidden; position:relative; height:280px;">
+        <img src="https://images.unsplash.com/photo-1519331379826-f10be5486c6f?auto=format&fit=crop&w=600&q=80" style="width:100%; height:100%; object-fit:cover;" alt="نافورة جدارية">
+        <div style="position:absolute; bottom:0; width:100%; background:linear-gradient(transparent, rgba(0,0,0,0.9)); padding:20px; color:#fff;">
+            <h4 style="color:var(--gold-accent);">نافورة جدارية بمصبات متعددة - نجران</h4>
+            <p style="font-size:0.85rem; margin-bottom:12px;">تصميم نافورة مودرن أنيقة تتناسب مع المداخل الخارجية</p>
+            <a href="contact.html" class="btn btn-gold" style="width:100%; justify-content:center; padding:8px; font-size:0.9rem; border-radius:8px;">طلب الخدمة <i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+    <!-- 18. أحواض زراعية مع إضاءة -->
+    <div class="project-card" data-category="lighting" style="border-radius:12px; overflow:hidden; position:relative; height:280px;">
+        <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=600&q=80" style="width:100%; height:100%; object-fit:cover;" alt="أحواض زراعية">
+        <div style="position:absolute; bottom:0; width:100%; background:linear-gradient(transparent, rgba(0,0,0,0.9)); padding:20px; color:#fff;">
+            <h4 style="color:var(--gold-accent);">أحواض نباتية مضاءة - الجبيل</h4>
+            <p style="font-size:0.85rem; margin-bottom:12px;">بناء أحواض زراعية إسمنتية مع إضاءة شريطية LED مخفية</p>
+            <a href="contact.html" class="btn btn-gold" style="width:100%; justify-content:center; padding:8px; font-size:0.9rem; border-radius:8px;">طلب الخدمة <i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+    <!-- 19. حصى ديكوري متداخل -->
+    <div class="project-card" data-category="flooring" style="border-radius:12px; overflow:hidden; position:relative; height:280px;">
+        <img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=600&q=80" style="width:100%; height:100%; object-fit:cover;" alt="حصى ديكوري">
+        <div style="position:absolute; bottom:0; width:100%; background:linear-gradient(transparent, rgba(0,0,0,0.9)); padding:20px; color:#fff;">
+            <h4 style="color:var(--gold-accent);">تنسيق حصى أبيض وأسود مع العشب - ينبع</h4>
+            <p style="font-size:0.85rem; margin-bottom:12px;">توزيع الأحجار والديكورات الحصوية لإعطاء مظهر ياباني راقي</p>
+            <a href="contact.html" class="btn btn-gold" style="width:100%; justify-content:center; padding:8px; font-size:0.9rem; border-radius:8px;">طلب الخدمة <i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+    <!-- 20. شبكة ري وتسميد حدائق الفلل -->
+    <div class="project-card" data-category="irrigation" style="border-radius:12px; overflow:hidden; position:relative; height:280px;">
+        <img src="https://images.unsplash.com/photo-1563514227147-6d2ff665a6a0?auto=format&fit=crop&w=600&q=80" style="width:100%; height:100%; object-fit:cover;" alt="ري وتسميد">
+        <div style="position:absolute; bottom:0; width:100%; background:linear-gradient(transparent, rgba(0,0,0,0.9)); padding:20px; color:#fff;">
+            <h4 style="color:var(--gold-accent);">شبكة ري وضخ متطورة - جازان</h4>
+            <p style="font-size:0.85rem; margin-bottom:12px;">تركيب مضخات ذكية ونظام رش رذاذ لترطيب الحديقة</p>
+            <a href="contact.html" class="btn btn-gold" style="width:100%; justify-content:center; padding:8px; font-size:0.9rem; border-radius:8px;">طلب الخدمة <i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+</div>
+    </div>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <div class="logo"> حدائق <span>الجنة</span></div>
+                <p style="margin-top:15px; color:#ccc;">المؤسسة الرائدة في خدمات الديكور والتنسيق الخارجي للحدائق والمناظر الطبيعية بالسعودية.</p>
+            </div>
+            <div class="footer-col">
+                <h4>روابط سريعة</h4>
+                <ul>
+                    <li><a href="services.html">خدماتنا</a></li>
+                    <li><a href="projects.html">معرض الأعمال</a></li>
+                    <li><a href="calculator.html">حاسبة التكلفة</a></li>
+                    <li><a href="contact.html">طلب معاينة</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>معلومات التواصل</h4>
+                <ul>
+                    <li><i class="fa-solid fa-phone"></i> 0501522576</li>
+                    <li><i class="fa-solid fa-location-dot"></i> المملكة العربية السعودية</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">&copy; 2026 جميع الحقوق محفوظة | مؤسسة حدائق الجنة
+            <br><a class="codexa" href="https://www.facebook.com/share/1Lwmq1GfqW/" target="_blank">تم التطوير بواسطة كوديكسا | codexa</a>
+        </div>
+    </footer>>
+
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

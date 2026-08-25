@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حاسبة تكلفة تنسيق الحدائق | حدائق الجنة</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+     <!-- Custom Cursor Elements -->
+<div class="cursor-dot"></div>
+<div class="cursor-outline"></div>
+
+    <header class="navbar sub-page-navbar">
+    <div class="container nav-container">
+        <a href="index.html" class="logo">
+            <i class="fa-solid fa-tree"></i> حدائق <span>الجنة</span>
+        </a>
+        
+        <!-- زر فتح القائمة للشاشات الصغيرة -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="قائمة التصفح">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav id="navMenu">
+            <ul class="nav-links">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="services.html">خدماتنا</a></li>
+                <li><a href="projects.html">معرض الأعمال</a></li>
+                <li><a href="calculator.html">حاسبة التكلفة</a></li>
+                <li><a href="blog.html">المدونة</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-contact">
+            <a href="contact.html" class="btn btn-gold">اطلب معاينة</a>
+        </div>
+    </div>
+</header>
+
+    <div style="padding-top: 130px;" class="container">
+        <div class="calculator-card">
+            <h2 style="text-align:center; color: var(--green-main); margin-bottom: 20px;">حاسبة مشروع التنسيق التقديرية</h2>
+            
+            <div class="progress-bar-container">
+                <div id="calc-progress" class="progress-bar"></div>
+            </div>
+
+            <!-- Step 1 -->
+            <div class="calc-step step-1 active" data-step="1">
+                <h3>الخطوة 1: أدخل مساحة الحديقة الإجمالية (بالمتر المربع)</h3>
+                <input type="number" id="calc-area" placeholder="أدخل المساحة مثل: 100" style="width:100%; padding:15px; margin:20px 0; border:1px solid #ccc; border-radius:8px;">
+                <button onclick="nextStep()" class="btn btn-gold full-width">التالي</button>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="calc-step step-2" data-step="2">
+                <h3>الخطوة 2: اختر نوع العشب المطلوب</h3>
+                <div class="step-options">
+                    <div class="option-box" onclick="calcData.grassType='economic'; nextStep();">اقتصادي (30 ريال/م²)</div>
+                    <div class="option-box" onclick="calcData.grassType='premium'; nextStep();">ممتاز (45 ريال/م²)</div>
+                    <div class="option-box" onclick="calcData.grassType='luxury'; nextStep();">فاخر للغاية (65 ريال/م²)</div>
+                </div>
+                <button onclick="prevStep()" class="btn btn-outline-light" style="color:#333;">السابق</button>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="calc-step step-3" data-step="3">
+                <h3>الخطوة 3: اختر الخدمات الإضافية</h3>
+                <label style="display:block; margin: 10px 0;"><input type="checkbox" name="addons" value="شبكة ري أوتوماتيكية" data-price="15"> شبكة ري ذكية (15 ريال/م²)</label>
+                <label style="display:block; margin: 10px 0;"><input type="checkbox" name="addons" value="إضاءة مخفية وبديل خشب" data-price="25"> إضاءة جدارية وديكور (25 ريال/م²)</label>
+                <button onclick="nextStep()" class="btn btn-gold full-width" style="margin-top:20px;">متابعة</button>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="calc-step step-4" data-step="4">
+                <h3>الخطوة 4: اختر مستوى التشطيب العام</h3>
+                <div class="step-options">
+                    <div class="option-box" onclick="calcData.finishLevel='economic'; nextStep();">قياسي</div>
+                    <div class="option-box" onclick="calcData.finishLevel='medium'; nextStep();">متوسط</div>
+                    <div class="option-box" onclick="calcData.finishLevel='luxury'; nextStep();">فاخر المودرن</div>
+                </div>
+            </div>
+
+            <!-- Step 5 (Result Container) -->
+            <div class="calc-step step-5" data-step="5">
+                <div id="calc-result"></div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <div class="logo"> حدائق <span>الجنة</span></div>
+                <p style="margin-top:15px; color:#ccc;">المؤسسة الرائدة في خدمات الديكور والتنسيق الخارجي للحدائق والمناظر الطبيعية بالسعودية.</p>
+            </div>
+            <div class="footer-col">
+                <h4>روابط سريعة</h4>
+                <ul>
+                    <li><a href="services.html">خدماتنا</a></li>
+                    <li><a href="projects.html">معرض الأعمال</a></li>
+                    <li><a href="calculator.html">حاسبة التكلفة</a></li>
+                    <li><a href="contact.html">طلب معاينة</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>معلومات التواصل</h4>
+                <ul>
+                    <li><i class="fa-solid fa-phone"></i> 0501522576</li>
+                    <li><i class="fa-solid fa-location-dot"></i> المملكة العربية السعودية</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">&copy; 2026 جميع الحقوق محفوظة | مؤسسة حدائق الجنة
+            <br><a class="codexa" href="https://www.facebook.com/share/1Lwmq1GfqW/" target="_blank">تم التطوير بواسطة كوديكسا | codexa</a>
+        </div>
+    </footer>
+
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/calculator.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
